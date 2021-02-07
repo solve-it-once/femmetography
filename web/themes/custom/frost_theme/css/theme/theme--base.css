@@ -115,8 +115,8 @@ html {
 body {
   background-color: var(--color--white);
   color: var(--color--black);
-  font-size: 16px;
-  font-weight: 200;
+  font-size: 18px;
+  font-weight: 400;
   line-height: var(--line-height--default);
   margin: 0;
   scroll-behavior: smooth;

@@ -1,6 +1,6 @@
 uuid: 770e027b-70d1-4f4c-9ee5-01ba91df28e2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.utility

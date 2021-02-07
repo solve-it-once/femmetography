@@ -1,4 +1,4 @@
-# nothemba Drupal 9 instance
+# femmetography Drupal 9 instance
 
 This readme has step-by-step instructions for installing a local version of the site and working with it.
 
@@ -33,7 +33,7 @@ the following two lines to your `/etc/hosts` file (or equivalent):
 ## Cloning and initializing a local site
 
 `cd` to where you want your site to be on your computer. I like `~/htdocs`, but any folder will do. Once there, run 
-`git clone git@github.com:solve-it-once/nothemba.git` to clone the repo locally. `cd` into it and you'll be able to 
+`git clone git@github.com:solve-it-once/femmetography.git` to clone the repo locally. `cd` into it and you'll be able to 
 traverse the codebase.
 
 ### .git/config
@@ -48,14 +48,14 @@ with:
   bare = false
   logallrefupdates = true
 [remote "origin"]
-  url = git@github.com:solve-it-once/nothemba.git
-  url = jzvvphvwpflyg@git.eu-4.platform.sh:jzvvphvwpflyg.git
+  url = git@github.com:solve-it-once/femmetography.git
+  url = gg3jiydv4qres@git.us-4.platform.sh:gg3jiydv4qres.git
   fetch = +refs/heads/*:refs/remotes/origin/*
 [remote "platform"]
-  url = jzvvphvwpflyg@git.eu-4.platform.sh:jzvvphvwpflyg.git
+  url = gg3jiydv4qres@git.us-4.platform.sh:gg3jiydv4qres.git
   fetch = +refs/heads/*:refs/remotes/platform/*
 [remote "github"]
-  url = git@github.com:solve-it-once/nothemba.git
+  url = git@github.com:solve-it-once/femmetography.git
   fetch = +refs/heads/*:refs/remotes/github/*
 [branch "master"]
   remote = origin
@@ -144,8 +144,8 @@ Once you have the requisite files in place per above, setting up a local site sh
       ```
         `drush sql-connect` < downloaded-file-name.sql
       ``` to import it to the mysql server container
-    2. With drush you may be able to run `drush sql-sync @nothemba.platformmaster @self` to bring the database down, and 
-      `drush rsync @nothemba.platformmaster:%files @self:%files` to get the files
+    2. With drush you may be able to run `drush sql-sync @femmetography.platformmaster @self` to bring the database down, and 
+      `drush rsync @femmetography.platformmaster:%files @self:%files` to get the files
   6. Visit http://localhost:8000/ to see your local site!
 
 ## Common operations
