@@ -1,0 +1,7 @@
+name: 'date_range_extras'
+type: module
+description: 'Adds field widget and validation for weekdays, plus a formatter for human-readability.'
+core_version_requirement: ^8 || ^9
+package: 'Field'
+dependencies:
+  - drupal:datetime_range

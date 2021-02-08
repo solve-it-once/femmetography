@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains date_range_extras.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function date_range_extras_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the date_range_extras module.
+    case 'help.page.date_range_extras':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Addds field widget and validation for weekdays, plus a formatter for human-readability.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
