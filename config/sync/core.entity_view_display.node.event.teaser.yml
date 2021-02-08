@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_branch
     - field.field.node.event.field_categories
     - field.field.node.event.field_components
     - field.field.node.event.field_date
@@ -25,17 +26,15 @@ third_party_settings:
   field_group:
     group_text_contents:
       children:
-        - linked_title
         - field_date
-        - field_location
+        - field_branch
         - body
+        - field_tags
       parent_name: ''
       weight: 1
       format_type: html_element
       region: content
       format_settings:
-        id: ''
-        classes: 'padding-horizontal--2 padding-vertical--2 flex--1'
         element: div
         show_label: false
         label_element: h3
@@ -43,6 +42,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'padding-horizontal--4 padding-vertical--4 flex--1'
       label: 'Text contents'
 _core:
   default_config_hash: KS70Lr0SN8O6qg--OaLaESca4DqBHgIya47K1e2bUvs
@@ -54,13 +55,23 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_branch:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
   field_date:
     type: daterange_default
-    weight: 3
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -70,7 +81,7 @@ content:
     third_party_settings: {  }
   field_image:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -79,21 +90,16 @@ content:
     third_party_settings:
       field_formatter_class:
         class: flex--1
-  field_location:
-    type: string
+  field_tags:
+    type: entity_reference_label
     weight: 4
     region: content
     label: hidden
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
   linked_title:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  links:
-    weight: 6
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -102,9 +108,10 @@ hidden:
   field_categories: true
   field_components: true
   field_hero: true
+  field_location: true
   field_sections: true
   field_seo: true
-  field_tags: true
   frost_submitted: true
   langcode: true
+  links: true
   search_api_excerpt: true

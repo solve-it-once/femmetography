@@ -1,0 +1,17 @@
+uuid: 23cef1b8-185e-4428-9b07-a20fead69790
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Branch
+type: branch
+description: 'A branch, bookmobile, or other location associated with the library'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

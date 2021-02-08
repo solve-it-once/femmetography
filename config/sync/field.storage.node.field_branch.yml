@@ -1,0 +1,19 @@
+uuid: 7accc2b3-1c10-45fa-bee5-265afeb3d3dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_branch
+field_name: field_branch
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

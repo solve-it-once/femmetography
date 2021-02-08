@@ -1,0 +1,28 @@
+uuid: ef115241-1bab-461d-a8e0-6c554080094d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.branch.body
+    - node.type.branch
+  module:
+    - text
+    - user
+id: node.branch.default
+targetEntityType: node
+bundle: branch
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  frost_submitted: true
+  langcode: true
+  linked_title: true
+  links: true
+  search_api_excerpt: true

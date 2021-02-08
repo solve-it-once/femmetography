@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_branch
     - field.field.node.event.field_categories
     - field.field.node.event.field_components
     - field.field.node.event.field_date
@@ -23,7 +24,6 @@ third_party_settings:
     group_fields:
       children:
         - field_components
-        - field_event_media
       parent_name: ''
       weight: 0
       format_type: html_element
@@ -67,6 +67,7 @@ content:
 hidden:
   body: true
   breadcrumb: true
+  field_branch: true
   field_categories: true
   field_date: true
   field_hero: true

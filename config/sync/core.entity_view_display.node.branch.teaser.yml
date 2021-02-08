@@ -1,0 +1,42 @@
+uuid: f1d51d04-b627-4e1f-a495-75d04676aac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.branch.body
+    - node.type.branch
+  module:
+    - text
+    - user
+id: node.branch.teaser
+targetEntityType: node
+bundle: branch
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  frost_submitted:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  linked_title:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

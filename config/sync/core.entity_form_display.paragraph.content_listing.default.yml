@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.content_listing
   module:
     - field_group
+    - inline_entity_form
 third_party_settings:
   field_group:
     group_admin:
@@ -63,12 +64,19 @@ content:
   field_content:
     weight: 9
     settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Node
+      label_plural: Nodes
+      allow_existing: true
       match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_new: false
+      allow_duplicate: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: inline_entity_form_complex
     region: content
   field_style_layout:
     weight: 7

@@ -182,6 +182,12 @@ function frost_custom_node_view(array &$build, EntityInterface $entity, EntityVi
       ];
     }
     else {
+      if ($entity->bundle() === 'event') {
+        // Directly class for demo. @todo give prefix header its own attributes.
+        $prefix = '<h2 class="background-color--grey-light padding-horizontal--4 padding-vertical--4 width--100p">';
+        $attributes['class'][] = 'color--accent';
+      }
+
       $build['linked_title'] = [
         '#prefix' => $prefix,
         '#type' => 'link',

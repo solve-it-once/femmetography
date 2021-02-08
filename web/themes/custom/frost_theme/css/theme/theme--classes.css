@@ -733,3 +733,23 @@ ul.tabs > li > a.is-active {
   color: var(--color--grey-dark);
   font-size: 0.875em;
 }
+
+/**
+ * Event teasers to spec.
+ */
+.node--event-teaser {}
+.node--event-teaser > h2 {
+  margin: 0;
+}
+@media all and (max-width: 768px) {
+  .node--event-teaser > figure {
+    order: -1;
+  }
+}
+
+/**
+ * Width helper classes.
+ */
+.width--100p {
+  width: 100%;
+}

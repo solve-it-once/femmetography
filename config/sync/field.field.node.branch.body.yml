@@ -1,0 +1,23 @@
+uuid: 6221cdcc-97ab-47ba-98bb-0bb08e20de9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.branch
+  module:
+    - text
+id: node.branch.body
+field_name: body
+entity_type: node
+bundle: branch
+label: 'Teaser text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
