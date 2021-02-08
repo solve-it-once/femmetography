@@ -104,6 +104,11 @@ function frost_theme_preprocess_field(&$vars) {
 
       break;
 
+    case 'field_date':
+      $vars['html_tag'] = 'strong';
+
+      break;
+
     case 'field_image':
       $vars['wrapped'] = TRUE;
       $vars['html_tag'] = 'figure';

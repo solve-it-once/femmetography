@@ -17,7 +17,7 @@ dependencies:
     - field.field.node.event.field_tags
     - node.type.event
   module:
-    - datetime_range
+    - date_range_extras
     - field_formatter_class
     - field_group
     - text
@@ -70,15 +70,17 @@ content:
       field_formatter_class:
         class: ''
   field_date:
-    type: daterange_default
+    type: date_range_extras_field_formatter
     weight: 1
     region: content
     label: hidden
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
-    third_party_settings: {  }
+      format_type: month_d_yyyy
+      separator: —
+    third_party_settings:
+      field_formatter_class:
+        class: ''
   field_image:
     type: entity_reference_entity_view
     weight: 2
