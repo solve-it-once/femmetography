@@ -16,7 +16,7 @@ dependencies:
     - field.field.node.event.field_tags
     - node.type.event
   module:
-    - datetime_range
+    - date_range_extras
     - field_group
     - media_library
     - paragraphs
@@ -117,7 +117,7 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
+    type: date_range_extras_field_widget
     region: content
   field_hero:
     weight: 4
